@@ -2,7 +2,9 @@ set mouse-=a "no mouse
 set clipboard+=unnamedplus
 let g:loaded_matchparen=1
 highlight Normal ctermbg=NONE guibg=NONE
-
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'luna'
+let g:python3_host_prog = "$HOME/.local/bin/pynvim-python"
 " set tabstop=2
 " set shiftwidth=2
 
