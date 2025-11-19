@@ -4,9 +4,11 @@
 
 Plug 'Rawnly/gist.nvim'
 ""------------------------------------
-" copilot
+" t
 ""------------------------------------
 
+Plug 'mattn/vim-sonictemplate'
+let g:sonictemplate_vim_template_dir = '~/.config/nvim/templates'
 
 ""------------------------------------
 " Helpfile
