@@ -1,18 +1,8 @@
 # Install
 
-## Node
-### [Volta](https://volta.sh)
-
-```sh
-curl https://get.volta.sh | bash
-
-volta install node
-npm install -g neovim
-```
-
-PATHを確認(.bashrc)
-
 ## Python
+
+PythonのライブラリをpipxでInstall
 
 ### pipx 
 
@@ -29,7 +19,43 @@ PATHを確認($HOME/.local/bin)
 
 ##  Neovim
 
-### [gh](https://github.com/cli/cli/blob/trunk/docs/install_linux.md)
+NeovimのInstallおよびプラグインの設定
+
+### [config](https://github.com/omas-public/nvim.git)
+
+Neovimの設定ファイルとPythonテンプレート
+
+```sh
+git clone https://github.com/omas-public/nvim.git ~/.config/nvim
+```
+
+### [Neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md)
+
+NeovimのInstall
+
+```sh
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+chmod u+x nvim-linux-x86_64.appimage
+sudo mv nvim-linux-x86_64.appimage /usr/local/nvim
+```
+
+### clipboard
+
+クリップボードのInstall
+
+```sh
+sudo apt install wl-clipboard`
+```
+
+```echo $XDG_SESSION_TYPE`` の結果がx11なら ```sudo apt install xclip``` 
+
+### Gist
+
+Gistとの連携Plugin
+
+#### [gh](https://github.com/cli/cli/blob/trunk/docs/install_linux.md)
+
+ghのInstall
 
 ```sh
 (type -p wget >/dev/null || (sudo apt update && sudo apt install wget -y)) \
@@ -43,49 +69,57 @@ PATHを確認($HOME/.local/bin)
 	&& sudo apt install gh -y
 ```
 
-#### gh settings
+##### gh settings
 ```sh
 gh
 gh config set editor nvim
 ```
-### [config](https://github.com/omas-public/nvim.git)
 
-```sh
-git clone https://github.com/omas-public/nvim.git ~/.config/nvim
-```
-
-### [Neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md)
-
-```sh
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
-chmod u+x nvim-linux-x86_64.appimage
-sudo mv nvim-linux-x86_64.appimage /usr/local/nvim
-```
-
-### clipboard
-
-```sh
-echo $XDG_SESSION_TYPE
-```
-結果がx11なら ```sudo apt install xclip``` Waylandなら ```sudo apt install wl-clipboard```
-
-### Gist
+##### 使い方
 
 ```sh
 nvim
 :GistCreate
 ```
 
-### [Copilot](https://github.com/github/copilot.vim/blob/release/README.md) 
+### Copilot
+
+GitHub Copilot連携
+
+#### [Volta](https://volta.sh)
+
+NodeJSのInstall
+
+```sh
+curl https://get.volta.sh | bash
+
+volta install node
+npm install -g neovim
+```
+
+PATHを確認(.bashrc)
+
+#### [Copilot](https://github.com/github/copilot.vim/blob/release/README.md) 
+
+Copilotプラグイン
 
 ```sh
 git clone --depth=1 https://github.com/github/copilot.vim.git \
   ~/.config/nvim/pack/github/start/copilot
 ```
 
-#### setup
+##### setup
 
 ```sh
 nvim
 :Copilot setup
+```
+
+### [Sonic template](https://github.com/mattn/vim-sonictemplate)
+
+
+#### 使い方
+```sh
+nvim
+:Template class
 ```
