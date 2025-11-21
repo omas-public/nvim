@@ -44,10 +44,10 @@ sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
 クリップボードのInstall
 
 ```sh
-sudo apt install wl-clipboard`
+sudo apt install wl-clipboard
 ```
 
-```echo $XDG_SESSION_TYPE`` の結果がx11なら ```sudo apt install xclip``` 
+```echo $XDG_SESSION_TYPE``` の結果がx11なら ```sudo apt install xclip``` 
 
 ### Gist
 
