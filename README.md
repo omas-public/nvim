@@ -71,8 +71,8 @@ ghのInstall
 
 ##### gh settings
 ```sh
-gh
 gh config set editor nvim
+gh auth login
 ```
 
 ##### 使い方
