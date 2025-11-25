@@ -1,23 +1,25 @@
-def in():
-    buff = input()
+def in_(n):
+    buff = [input() for _ in range(n)]
     return buff
 
 
-def fun(p):
-    return p
+def fun_(p):
+    buff = p
+    return buff
 
 
-def out(p):
-    print(p)
+def out_(p):
+    buff = p
+    print(buff)
 
 
-if __name__== "__main__":
+if __name__ == "__main__":
 
     # preprocessing
-    stdin = in()
+    stdin = in_(1)
 
     # main function
-    stdout = fun(stdout)
+    stdout = fun_(stdin)
 
     # display
-    out(stdout) 
+    out_(stdout)
