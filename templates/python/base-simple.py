@@ -1,14 +1,17 @@
-def in_(n):
-    buff = [input() for _ in range(n)]
+identity = I = lambda x: x
+consistent = K = lambda x: y: x
+
+def gets(n, fn=I):
+    buff = [fn(input()) for _ in range(n)]
     return buff
 
 
-def fun_(p):
+def fun(p):
     buff = p
     return buff
 
 
-def out_(p):
+def puts(p):
     buff = p
     print(buff)
 
@@ -16,10 +19,10 @@ def out_(p):
 if __name__ == "__main__":
 
     # preprocessing
-    stdin = in_(1)
+    _stdin = gets(1)
 
     # main function
-    stdout = fun_(stdin)
+    _stdout = fun(_stdin)
 
     # display
-    out_(stdout)
+    puts(_stdout)
