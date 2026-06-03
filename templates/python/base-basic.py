@@ -4,12 +4,10 @@ from sys import stdin
 # utility function
 identity = I = lambda x: x
 consistent = K = lambda x: lambda y: x
-bisect_pick = lambda d, v: list(d.values())[bisect(list(d.keys()), v) - 1]
+bisect_pick = lambda d: lambda v: list(d.values())[bisect(list(d.keys()), v) - 1]
 join = lambda sep="\n", fn=str: lambda values: sep.join(map(fn, values))
 split = lambda sep=" ", fn=I: lambda v: list(map(fn, v.split(sep)))
-# 入力を受け取りリストにして返す関数
 gets = lambda n, fn=I: [fn(line) for line in stdin.read().split('\n')[:n]]
-#　出力関数
 puts = lambda value, fn=str: print(fn(value))
 
 # 入力データを受取り加工して返す関数
@@ -18,8 +16,8 @@ def main(p):
     return buff
 
 # 出力用に加工する関数
-def transform(p):
-    buff = p
+def transform(p, fn=I):
+    buff = fn(p)
     return buff
 
 
